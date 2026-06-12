@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Contact - Final Portfolio Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      /* Styling Only Related To THIS Page */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: clamp(2.5rem, 7vw, 5rem);
+        align-items: start;
+      }
+
+      .reach-card {
+        border-top: 1px solid var(--hairline);
+        padding: 1.4rem 0.25rem;
+      }
+
+      .reach-card:last-child {
+        border-bottom: 1px solid var(--hairline);
+      }
+
+      .reach-card .label {
+        display: block;
+        margin-bottom: 0.3rem;
+      }
+
+      .reach-card a,
+      .reach-card .val {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 1.3rem;
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: color 0.25s ease, border-color 0.25s ease;
+      }
+
+      .reach-card a:hover {
+        color: var(--gold-deep);
+        border-bottom-color: var(--gold);
+      }
+
+      @media (max-width: 720px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo">amelie <span>lucille</span></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero">
+      <span class="label reveal">say hello</span>
+      <h1 class="reveal d1">get in <span>touch</span></h1>
+      <p class="reveal d2">collaborations, bookings, or just a kind word — all welcome.</p>
+    </header>
+
+    <section>
+      <div class="section-head reveal">
+        <span class="label">( 01 )</span>
+        <h2>write to <em>me</em></h2>
+      </div>
+      <div class="contact-grid">
+        <form class="reveal">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="your name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="booking, collab, hello..." />
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="tell me what's on your mind"></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send message <span class="arr">&rarr;</span></button>
+        </form>
+
+        <div class="reveal d1">
+          <div class="reach-card">
+            <span class="label">Instagram</span>
+            <a href="https://www.instagram.com/amelie___lucille/" target="_blank" rel="noopener">@amelie___lucille</a>
+          </div>
+          <div class="reach-card">
+            <span class="label">Spotify</span>
+            <a href="https://open.spotify.com/artist/5BNec1RUFoU3AoKdxm1USi" target="_blank" rel="noopener">Amelie Lucille</a>
+          </div>
+          <div class="reach-card">
+            <span class="label">Based in</span>
+            <span class="val">New York City</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="big">amelie <em>lucille</em></p>
+      <p class="thanks">thank you for being here :)</p>
+      <div class="links">
+        <a href="https://open.spotify.com/artist/5BNec1RUFoU3AoKdxm1USi" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://www.instagram.com/amelie___lucille/" target="_blank" rel="noopener">Instagram</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="fine">&copy; 2026 amelie lucille &mdash; made in nyc</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
