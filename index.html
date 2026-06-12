@@ -1,102 +1,120 @@
 <!-- Final Project
 Requirements
-[  ] Customized HTML Page #1
-[  ] Customized HTML Page #2 
-[  ] Customized HTML Page #3
-[  ] Customized HTML Page #4
+[ X ] Customized HTML Page #1 - index.html (Home)
+[ X ] Customized HTML Page #2 - about.html (About)
+[ X ] Customized HTML Page #3 - music.html (Music)
+[ X ] Customized HTML Page #4 - contact.html (Contact)
 
-Select ONE Additional Feature to Add  
-[ no ] Feature 1 - Google Font
-[ no ] Feature 2 - Include jQuery
-[ no ] Feature 3 - Embed Code from Spotify/Google Docs/YouTube
-[ no ] Feature 4 - Customized HTML Page #5
+Select ONE Additional Feature to Add
+[ no  ] Feature 1 - Google Font (also included as a bonus: Fraunces, DM Mono, Inter)
+[ no  ] Feature 2 - Include jQuery
+[ YES ] Feature 3 - Embed Code from Spotify (artist player on music.html)
+[ no  ] Feature 4 - Customized HTML Page #5
 -->
-
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Final Portfolio Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <style>
       /* Styling Only Related To THIS Page */
-      /*~~~~~ Taken From:
-      https://www.w3schools.com/howto/howto_css_parallax.asp*/
-      .parallax {
-        /* The image used */
-        background-image:;
-
-        /* Set a specific height */
-        min-height: 500px;
-
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      .textblock {
-        min-height: 500px;
-        background-color: rgb(224, 169, 169);
-        color: white;
-      }
-      .parent-flex {
-        display: flex;
-      }
-      .child-flex {
-        background-color: rgb(122, 4, 4);
-        margin: 30px;
-        padding: 10px;
-        text-align: justify;
-      }
-      .para-1{
-        display: flex;
-        align-items: center;
+      .hero-home h1 {
+        font-size: clamp(3.2rem, 13vw, 8.5rem);
       }
     </style>
   </head>
   <body>
-    <!-- ⬆⬆⬆⬆ Nav Bar -->
-    <ul>
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="aboutme.html">About Me</a></li>
-      <li><a href="art.html">Art</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li style="float: right">
-        <a target="_blank" href=""
-          ><img
-            src="https://www.getfocused.no/wp-content/uploads/2022/09/White-YouTube-Logo-Transparent.png"
-            style="width: 25px; margin: -5px"
-        /></a>
-      </li>
-      <li style="float: right">
-        <a target="_blank" href=""
-          ><img
-            src="https://img.icons8.com/win10/512/FFFFFF/instagram-new.png"
-            style="width: 25px; margin: -5px"
-        /></a>
-      </li>
-    </ul>
+    <nav>
+      <a href="index.html" class="logo">amelie <span>lucille</span></a>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-    <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
-    <h1>Amelie Siller</h1>
-     <img src="https://farsightedblog.com/wp-content/uploads/2023/07/339729-600x303.jpg"
-    <div class="parallax"></div>
+    <header class="hero hero-home">
+      <span class="label reveal">singer-songwriter &mdash; new york city</span>
+      <h1 class="reveal d1">amelie <span>lucille</span></h1>
+      <p class="reveal d2">
+        seventeen. writes on guitar. raised on her dad's record collection
+        and the noise of the city — currently at LaGuardia High School.
+      </p>
+      <a href="music.html" class="btn reveal d3">Listen to the music <span class="arr">&rarr;</span></a>
+      <span class="ornament reveal d3">&#10038; &#10038; &#10038;</span>
+    </header>
 
-    <div class="textblock parent-flex">
-      <div class="child-flex para-1">
-       
-        <p>
-      Singer-songwriter from New York inspired by artists like
-The Cure, Cocteau Twins, Björk, and Lana Del Rey.
-        </p>
-      </div>
-      <div class="child-flex">
-        <p>
-         Confessional, intimate and musically captivating throughout, her music is a must-listen for fans of storytelling artists like Lana Del Rey, Norah Jones or Cat Power who freely reach into the shadow for inspiration. It's little surprise Amelie Lucille is fast becoming a sought-after live act, regularly performing across New York at iconic venues like The Bitter End.
-        </p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>foolove</span><span class="star">&#10038;</span>
+        <span>polar</span><span class="star">&#10038;</span>
+        <span>back to her</span><span class="star">&#10038;</span>
+        <span>live at the bitter end</span><span class="star">&#10038;</span>
+        <span>written on guitar</span><span class="star">&#10038;</span>
+        <span>made in nyc</span><span class="star">&#10038;</span>
+        <span>foolove</span><span class="star">&#10038;</span>
+        <span>polar</span><span class="star">&#10038;</span>
+        <span>back to her</span><span class="star">&#10038;</span>
+        <span>live at the bitter end</span><span class="star">&#10038;</span>
+        <span>written on guitar</span><span class="star">&#10038;</span>
+        <span>made in nyc</span><span class="star">&#10038;</span>
       </div>
     </div>
+
+    <section>
+      <div class="bio-quote reveal">
+        <blockquote>
+          i am the product of a nyc childhood and my dad's impeccable music
+          taste — thank you for being here :)
+        </blockquote>
+        <cite>from her spotify bio</cite>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head reveal">
+        <span class="label">( 01 )</span>
+        <h2>hello, <em>hi</em></h2>
+      </div>
+      <div class="split">
+        <figure class="photo-frame reveal">
+          <div class="ph">
+            <img src="images/amelie-1.jpg" alt="Amelie Lucille singing with her guitar under blue stage light" onerror="this.style.display='none'" />
+          </div>
+          <span class="placeholder">add a photo here<br />(images/amelie-1.jpg)</span>
+          <figcaption>onstage, eyes closed</figcaption>
+        </figure>
+        <div class="reveal d1">
+          <p>
+            I'm Amelie — a 17-year-old singer-songwriter from New York City.
+            Most of my songs start the same way: just me, a guitar, and
+            whatever the city left me with that day.
+          </p>
+          <p>
+            This site is home to my music and my story, and a way to reach me
+            if you want to collaborate, book a show, or just say hi.
+          </p>
+          <a href="about.html" class="btn ghost">More about me <span class="arr">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="big">amelie <em>lucille</em></p>
+      <p class="thanks">thank you for being here :)</p>
+      <div class="links">
+        <a href="https://open.spotify.com/artist/5BNec1RUFoU3AoKdxm1USi" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://www.instagram.com/amelie___lucille/" target="_blank" rel="noopener">Instagram</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="fine">&copy; 2026 amelie lucille &mdash; made in nyc</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
